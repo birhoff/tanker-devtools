@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+
+    "name": "TankerInspector",
+    "description": "The extension for Tanker",
+    "version": "1.4",
+
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+
+    "content_scripts": [{
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }],
+
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "<all_urls>"
+    ],
+    "devtools_page": "panel.html"
+  }
